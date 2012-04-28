@@ -2,6 +2,7 @@ app = require 'apprentice'
 pin = require 'linchpin'
 fs = require 'fs'
 cc = require 'coffeecup'
+
 #pages
 index = ''
 johnny = ''
@@ -35,12 +36,12 @@ fs.readFile(__dirname + '/../public/js/bootstrap.min.js', 'utf8', (err,data) -> 
 fs.readFile(__dirname + '/../public/css/bootstrap.min.css', 'utf8', (err,data) ->  bootstrapCSS += data )
 
 #Static Routes
-pin.on('GET/js', (req, res) ->
+pin.on('GET/bootstrapJS', (req, res) ->
   res.writeHead(200, {'content-type': 'text/plain'})
   res.end(bootstrapJS)
 )
 
-pin.on('GET/css', (req, res) ->
+pin.on('GET/bootstrapCSS', (req, res) ->
   res.writeHead(200, {'content-type': 'text/plain'})
   res.end(bootstrapCSS)
 )
