@@ -5,6 +5,7 @@
 ####Usage
 
     git clone https://github.com/gradus/johnny-tremain
+    cd johnny-tremain
     npm install
     npm start
 
@@ -13,4 +14,6 @@
 http://locahost:3000
 
 ####Learn
+
+What an apprentice really is.
 
