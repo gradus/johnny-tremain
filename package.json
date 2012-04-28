@@ -1,0 +1,25 @@
+{
+  "author": "Kris Windham <kriswindham@gmail.com> (krwindham@jit.su)",
+  "name": "johnny_tremain",
+  "description": "Aprrentice example app",
+  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/gradus/johnny_tremain"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "./bin/server"
+  },
+  "dependencies": {
+    "linchpin": "*",
+    "apprentice": "*"
+  },
+  "devDependencies": {
+    "mocha": "1.0.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "0.6.x"
+  }
+}
