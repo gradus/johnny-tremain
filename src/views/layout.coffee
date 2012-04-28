@@ -6,7 +6,6 @@ module.exports = ->
       meta name: 'viewport', content: 'width=device-width, initial-scale=0.7, maximum-scale=1'
       link rel: 'stylesheet', href: '/public/css/bootstrap.min.css'
       script src: '/public/javascripts/bootstrap.min.js'
-
     body ->
       div '.navbar.navbar-fixed-top', ->
         div '.navbar-inner', ->
@@ -19,5 +18,4 @@ module.exports = ->
                     a href: '/johnny', 'Johnny'
                   li ->
                     a href: '/tremain', 'Tremain'
-      div '.container', ->
-        a href: 'http://en.wikipedia.org/wiki/Johnny_Tremain', 'Johnny Tremain'
+

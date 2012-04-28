@@ -14,7 +14,8 @@
   "dependencies": {
     "linchpin": "*",
     "coffeecup": "https://github.com/gradus/coffeecup/tarball/master",
-    "apprentice": "*"
+    "apprentice": "*",
+    "filed": "0.0.6"
   },
   "devDependencies": {
     "mocha": "1.0.1"

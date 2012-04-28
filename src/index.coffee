@@ -1,18 +1,14 @@
 app = require 'apprentice'
 pin = require 'linchpin'
 fs = require 'fs'
+filed = require 'filed'
 cc = require 'coffeecup'
 
-#pages
-index = ''
-johnny = ''
-tremain = ''
+index = require './views/index'
+johnny = require './views/johnny'
+tremain = require './views/tremain'
 
-fs.readFile('./src/views/index.coffee', 'utf8', (err,data) -> index += data )
-fs.readFile('./src/views/johnny.coffee', 'utf8', (err,data) ->  johnny += data )
-fs.readFile('./src/views/tremain.coffee', 'utf8', (err,data) ->  tremain += data )
 
-console.log index
 pin.on('GET', (req, res) ->
   res.writeHead(200, {'content-type': 'text/html'})
   res.end(cc.render(index))
@@ -29,22 +25,7 @@ pin.on('GET/tremain', (req, res) ->
 )
 
 # Static Files
-bootstrapJS = ''
-bootstrapCSS = ''
-
-fs.readFile(__dirname + '/../public/js/bootstrap.min.js', 'utf8', (err,data) ->  bootstrapJS += data )
-fs.readFile(__dirname + '/../public/css/bootstrap.min.css', 'utf8', (err,data) ->  bootstrapCSS += data )
-
-#Static Routes
-pin.on('GET/bootstrapJS', (req, res) ->
-  res.writeHead(200, {'content-type': 'text/plain'})
-  res.end(bootstrapJS)
-)
-
-pin.on('GET/bootstrapCSS', (req, res) ->
-  res.writeHead(200, {'content-type': 'text/plain'})
-  res.end(bootstrapCSS)
-)
+pin.on 'GET/public/*/*', (req, res) -> filed("#{__dirname}/../#{req.url}").pipe(res)
 
 app.httpServer.listen 3000
 console.log "listening on port 3000"
