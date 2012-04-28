@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "linchpin": "*",
+    "coffeecup": "https://github.com/gradus/coffeecup/tarball/master",
     "apprentice": "*"
   },
   "devDependencies": {
@@ -21,5 +22,6 @@
   "optionalDependencies": {},
   "engines": {
     "node": "0.6.x"
-  }
+  },
+  "subdomain": "johnny-tremain"
 }
