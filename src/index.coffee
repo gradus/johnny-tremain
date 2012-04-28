@@ -31,18 +31,18 @@ pin.on('GET/tremain', (req, res) ->
 bootstrapJS = ''
 bootstrapCSS = ''
 
-fs.readFile(__dirname + '/../public/js/bootstrap.min.js', (err,data) ->  bootstrapJS += data )
-fs.readFile(__dirname + '/../public/css/bootstrap-responsive.min.css', (err,data) ->  bootstrapCSS += data )
+fs.readFile(__dirname + '/../public/js/bootstrap.min.js', 'utf8', (err,data) ->  bootstrapJS += data )
+fs.readFile(__dirname + '/../public/css/bootstrap.min.css', 'utf8', (err,data) ->  bootstrapCSS += data )
 
 #Static Routes
-pin.on('GET/bootstrapJS', (req, res) ->
+pin.on('GET/js', (req, res) ->
   res.writeHead(200, {'content-type': 'text/plain'})
   res.end(bootstrapJS)
 )
 
-pin.on('GET/bootstrapCSS', (req, res) ->
+pin.on('GET/css', (req, res) ->
   res.writeHead(200, {'content-type': 'text/plain'})
-  res.end(bootstrapJS)
+  res.end(bootstrapCSS)
 )
 
 app.httpServer.listen 3000
