@@ -17,3 +17,5 @@ html ->
                   a href: '/johnny', 'Johnny'
                 li ->
                   a href: '/tremain', 'Tremain'
+
+    a href: 'https://github.com/twilson63/apprentice', 'Apprentice'
