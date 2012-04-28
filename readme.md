@@ -1,6 +1,7 @@
-### Example app using @twilson63 Apprenctice and Linchpin
+### Example app using @twilson63 Apprentice and Linchpin
 
 [Apprentice](https://github.com/twilson63/apprentice)
+[Linchpin](https://github.com/twilson63/linchpin)
 
 ####Usage
 
